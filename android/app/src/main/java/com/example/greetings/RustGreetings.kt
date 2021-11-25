@@ -4,7 +4,5 @@ class RustGreetings {
         return result
     }
 
-    companion object {
-        private external fun greeting(pattern: String): String
-    }
+    private external fun greeting(pattern: String): String
 }

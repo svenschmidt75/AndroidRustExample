@@ -26,7 +26,7 @@ pub mod android {
     use super::*;
 
     #[no_mangle]
-    pub unsafe extern "C" fn Java_RustGreetings_00024Companion_greeting(
+    pub unsafe extern "C" fn Java_RustGreetings_greeting(
         env: JNIEnv,
         _: JClass,
         java_pattern: JString,
