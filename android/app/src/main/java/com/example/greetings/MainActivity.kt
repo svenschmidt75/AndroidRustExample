@@ -27,6 +27,6 @@ class MainActivity : AppCompatActivity() {
 
         val g = RustGreetings()
         val r = g.sayHello("world")
-        (findViewById<View>(android.R.id.title) as TextView).text = r
+        (findViewById<View>(R.id.greetingField) as TextView).text = r
     }
 }
