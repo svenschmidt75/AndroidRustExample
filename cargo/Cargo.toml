@@ -1,0 +1,14 @@
+[package]
+name = "cargo"
+version = "0.1.0"
+edition = "2021"
+
+[target.'cfg(target_os="android")'.dependencies]
+jni = { version = "0.5", default-features = false }
+
+[lib]
+crate-type = ["dylib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]

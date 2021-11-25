@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#cd ~/Develop/Android/greetings/cargo
+
+cargo build --target aarch64-linux-android --release
+cp target/aarch64-linux-android/release/libcargo.so ../android/app/src/main/jniLibs/arm64/
+cp target/aarch64-linux-android/release/libcargo.so ../android/app/src/main/jniLibs/arm64/
+
+cargo build --target armv7-linux-androideabi --release
+cp target/armv7-linux-androideabi/release/libcargo.so ../android/app/src/main/jniLibs/armeabi/
+cp target/armv7-linux-androideabi/release/libcargo.so ../android/app/src/main/jniLibs/armeabi/
+
+cargo build --target i686-linux-android --release
+cp target/i686-linux-android/release/libcargo.so ../android/app/src/main/jniLibs/x86/
