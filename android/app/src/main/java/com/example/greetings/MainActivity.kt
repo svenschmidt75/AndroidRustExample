@@ -10,14 +10,8 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         init {
-            //here goes static initializer code
-            try {
-                System.loadLibrary("cargo")
-            }
-            catch (e: UnsatisfiedLinkError) {
-                print(e);
-            }
-
+            // SS: load native libraries
+            System.loadLibrary("cargo")
         }
     }
 
