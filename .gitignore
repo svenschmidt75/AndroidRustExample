@@ -1,0 +1,7 @@
+
+android/app/src/main/jniLibs/arm64/
+android/app/src/main/jniLibs/arm64-v8a/
+android/app/src/main/jniLibs/armeabi/
+android/app/src/main/jniLibs/armeabi-v7a/
+android/app/src/main/jniLibs/x86/
+
