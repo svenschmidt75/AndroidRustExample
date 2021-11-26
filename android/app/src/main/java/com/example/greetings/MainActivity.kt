@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val g = RustGreetings()
-        val r = g.sayHello("world")
+        val r = g.sayHello("from Rust")
         (findViewById<View>(R.id.greetingField) as TextView).text = r
     }
 }

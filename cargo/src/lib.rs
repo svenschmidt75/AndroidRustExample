@@ -31,8 +31,6 @@ pub mod android {
         _: JClass,
         java_pattern: JString,
     ) -> jstring {
-        println!("Test 1");
-
         // Our Java companion code might pass-in "world" as a string, hence the name.
         let world = rust_greeting(
             env.get_string(java_pattern)
@@ -40,15 +38,11 @@ pub mod android {
                 .as_ptr(),
         );
 
-        println!("Test 2");
-
         // Retake pointer so that we can use it below and allow memory to be freed when it goes out of scope.
         let world_ptr = CString::from_raw(world);
         let output = env
             .new_string(world_ptr.to_str().unwrap())
             .expect("Couldn't create java string!");
-
-        println!("Test 3");
 
         output.into_inner()
     }
